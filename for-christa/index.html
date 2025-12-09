@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Creestah 💕</title>
+    <title>For Christa 💌</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Cute modern font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,25 +12,26 @@
       rel="stylesheet"
     />
 
-    <!-- updated path -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- note the relative path (.. because we're in /for-christa/) -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
     <div class="background-glow"></div>
 
     <main class="card">
-      <div class="badge">for Christa 💗</div>
+      <div class="badge">secret page 🌸</div>
 
       <img
-        src="assets/img/creestah.png"
+        src="../assets/img/creestah.png"
         alt="Creestah"
         class="creestah-image"
       />
 
-      <h1>Creestah loves to get smooches</h1>
+      <h1>Hi Christa, you found the secret page 💖</h1>
 
       <p>
-        This little corner of the internet is just for you.
+        This is just a tiny reminder that you are very loved,
+        very appreciated, and extremely smooch-worthy.
       </p>
 
       <p class="counter-text">
@@ -40,8 +40,12 @@
       </p>
 
       <button class="smooch-button" id="smooch-button">
-        Send a smooch 💋
+        Send another smooch 💋
       </button>
+
+      <p class="counter-text">
+        <a href="../" class="home-link">Take me back home</a>
+      </p>
     </main>
 
     <script>
@@ -60,7 +64,6 @@
           countEl.textContent = count;
           localStorage.setItem(STORAGE_KEY, String(count));
 
-          // tiny click animation
           buttonEl.classList.add("smooch-button--clicked");
           setTimeout(
             () => buttonEl.classList.remove("smooch-button--clicked"),
