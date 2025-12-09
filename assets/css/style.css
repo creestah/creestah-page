@@ -99,7 +99,7 @@ p {
   color: #c1276d;
 }
 
-/* Buttons */
+/* Smooch button */
 .smooch-button {
   display: inline-flex;
   align-items: center;
@@ -119,7 +119,7 @@ p {
     transform 150ms ease,
     box-shadow 150ms ease,
     filter 150ms ease;
-  margin-bottom: 20px; /* 👈 add this */
+  margin-bottom: 20px; /* space below button */
 }
 
 .smooch-button:hover {
