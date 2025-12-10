@@ -84,10 +84,6 @@ This repo is deployed via **GitHub Pages**:
 
 - **Source:** `main` branch, root (`/`)
 - **Custom domain:** `creestah.com`
-- DNS is managed by **Cloudflare**, with:
-  - `creestah.com` → CNAME → `creestah.github.io`
-  - `www.creestah.com` → CNAME → `creestah.github.io`
-  - Both set as **DNS only** (no proxy)
 
 Any pushes to `main` automatically redeploy the site.
 
@@ -96,4 +92,4 @@ Any pushes to `main` automatically redeploy the site.
 ## Notes
 
 This project exists purely for fun, affection, and smooches.  
-If you’re reading this and your name is Christa: hi, you are very loved. 💗
+If you’re reading this and your name is Christa: hi, smooches from Vlad 😘
