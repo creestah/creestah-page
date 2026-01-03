@@ -4,7 +4,7 @@
     if (!countEl || !buttonEl) return;
 
     const API_URL =
-        window.location.origin.startsWith("file:")
+        window.location.origin.startsWith("file:") || window.location.origin.startsWith("http://localhost")
             ? "https://creestah.com/api/smooches"
             : "/api/smooches";
 
