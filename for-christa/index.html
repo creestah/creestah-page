@@ -12,12 +12,21 @@
       rel="stylesheet"
     />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- note the relative path (.. because we're in /for-christa/) -->
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
@@ -35,12 +44,12 @@
       <h1>Hi Christa, you found the secret page 💖</h1>
 
       <p>
-        This is just a tiny reminder that you are very loved,
-        very appreciated, and extremely smooch-worthy.
+        This is just a tiny reminder that you are very loved, very appreciated,
+        and extremely smooch-worthy.
       </p>
 
       <p class="counter-text">
-        Smooches sent from this device:
+        Smooches sent so far:
         <span id="smooch-count">0</span>
       </p>
 
@@ -53,29 +62,6 @@
       </p>
     </main>
 
-    <script>
-      (function () {
-        const countEl = document.getElementById("smooch-count");
-        const buttonEl = document.getElementById("smooch-button");
-        if (!countEl || !buttonEl) return;
-
-        const STORAGE_KEY = "creestah_smooch_count";
-        let count = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
-        if (isNaN(count) || count < 0) count = 0;
-        countEl.textContent = count;
-
-        buttonEl.addEventListener("click", () => {
-          count++;
-          countEl.textContent = count;
-          localStorage.setItem(STORAGE_KEY, String(count));
-
-          buttonEl.classList.add("smooch-button--clicked");
-          setTimeout(
-            () => buttonEl.classList.remove("smooch-button--clicked"),
-            180
-          );
-        });
-      })();
-    </script>
+    <script src="../assets/js/smooch-counter.js"></script>
   </body>
 </html>
