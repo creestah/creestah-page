@@ -188,3 +188,30 @@ p {
     font-size: 0.9rem;
   }
 }
+
+/* Floating hearts */
+.floating-hearts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0;
+    pointer-events: none;
+    animation: float-up 1.6s ease-out forwards;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80px) scale(1.4);
+        opacity: 0;
+    }
+}
