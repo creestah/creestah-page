@@ -1,6 +1,6 @@
 # creestah-page 💕
 
-A tiny, cute landing page for Christa, deployed at **https://creestah.com**.
+A tiny, cute landing page for Christa, deployed at **<https://creestah.com>**.
 
 The site is a simple static page built with HTML + CSS + a sprinkle of JavaScript.  
 It has:
