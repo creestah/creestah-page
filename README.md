@@ -6,7 +6,7 @@ The site is a simple static page built with HTML + CSS + a sprinkle of JavaScrip
 It has:
 
 - A soft, pastel, rounded card layout
-- A **smooch counter** stored per-device using `localStorage`
+- A **global smooch counter** backed by a tiny API
 - A **secret page** at `/for-christa`
 - Favicons and Apple touch icons
 - Hosted on **GitHub Pages**, fronted by **Cloudflare**
@@ -18,6 +18,7 @@ It has:
 - Plain **HTML**
 - **CSS** (no framework)
 - A few lines of vanilla **JavaScript** for the smooch counter
+- A simple **API endpoint** for the global count (`/api/smooches`)
 - Deployed using **GitHub Pages**
 
 No build step, no bundler, no framework ✨
@@ -28,14 +29,17 @@ No build step, no bundler, no framework ✨
 
 ```text
 .
-├── index.html              # Main page (Creestah loves to get smooches)
+├── index.html                  # Main page (Creestah loves to get smooches)
 ├── for-christa/
-│   └── index.html          # Secret page at /for-christa
+│   └── index.html              # Secret page at /for-christa
 ├── assets/
 │   ├── css/
-│   │   └── style.css       # Shared styles
+│   │   └── style.css           # Shared styles
+│   ├── js/
+│   │   └── smooch-counter.js   # Counter logic + hearts
 │   └── img/
-│       └── creestah.png    # Main image
+│       ├── creestah.jpg        # Main image
+│       └── creestah2.jpg       # Secret page image
 ├── apple-touch-icon.png
 ├── favicon-32x32.png
 ├── favicon-16x16.png
@@ -47,14 +51,13 @@ No build step, no bundler, no framework ✨
 
 ## Smooch counter
 
-The smooch counter is implemented using `localStorage` and is **per-device**:
+The smooch counter is global and backed by a tiny API endpoint:
 
-- Every click on `Send a smooch 💋` increments a number stored under a key
-  like `creestah_smooch_count`.
-- The same key is used on both the main page and the `/for-christa` page,
-  so the count is shared between them on that device.
+- Both pages call `/api/smooches` to fetch and increment the count.
+- When running locally (file:// or localhost), it points at
+  `https://creestah.com/api/smooches`.
 
-No backend, no tracking, just local cuteness.
+No tracking, just a simple shared count.
 
 ---
 
